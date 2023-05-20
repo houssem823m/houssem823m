@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+a{
+    text-decoration: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+body{
+  background-color: rgba(236, 236, 236, 0.357);
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .title {
+    font-size: 28px;
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: royalblue;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a {
+    color: royalblue;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input:valid + span {
+    color: green;
+  }
+  
+  .submit {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+  }
+  
+  .submit:hover {
+    background-color: rgb(56, 90, 194);
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+.register{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+
+}
+
+#header{
+    display: flex;
+    
+    justify-content: space-between;
+    padding: 10px 40px  10px 80px;
+    background-color: rgb(56, 90, 194);
+    box-shadow: 0 5px rgba(0, 0, 0 , 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding-top: 2px;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: #fff;
+}
+
+#navbar li a.active::after, 
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(56, 90, 194);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+
+}
+.material-symbols-outlined{
+    margin-left: 40px;
+    color: #ffffff;
+    padding-top: 20px;
+    
+}
+.signin-disp{
+    justify-content: center;
+    align-items: center;
+
+}
+.section-p1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(56, 90, 194);
+    margin-top: 20px;
+    color: #fff;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    margin-top:30px;
+    margin-left: 100px;
+
+}
+
+.section-p1 h4{
+    font-size: 19px;
+    padding-bottom: 20px;
+}
+
+.section-p1 p{
+    font-size: 15px;
+    margin: 0 0 8px 0;
+}
+
+.section-p1 a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 10px ;
+}
+
+.section-p1 .follow{
+    color: #222;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+.section-p1 .follow i{
+    color: #465b52;
+    padding-right: 7px;
+    cursor: pointer;
+}
+/* inspired form gumroad website */
+.buttonsig {
+  --bg: #000;
+  --hover-bg: #ffffff;
+  --hover-text: #000;
+  color: #fff;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: var(--bg);
+  transition: 0.2s;
+  margin-left: 35px;
+  padding: 10px 15px 10px 15px;
+}
+
+.buttonsig:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem,-0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.buttonsig:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+.imin{
+  display: flex;
+}
+.sig1{
+  display: flex;
+}
+
+.card {
+  width: 290px;
+  height: 374px;
+  background: white;
+  padding: .4em;
+  border-radius: 6px;
+  
+}
+
+.card-image {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 60%;
+  border-radius: 6px 6px 0 0;
+}
+.card-image img{
+  width: 100%;
+  height: 100%;
+}
+/*.carda{
+  border: 0.01px solid #465b52;
+
+}*/
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+.author {
+  color: gray;
+  font-weight: 400;
+  font-size: 11px;
+  padding-top: 20px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.name:hover {
+  cursor: pointer;
+}
+.line{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 10px 10px;
+}
+.line .card{
+  margin-top: 30px;
+}
+.line .carda{
+  padding-right: 20px;
+  margin-top: 30px;
+
+}
+.ind{
+  display: flex;
+  margin-top: 100px;
+
+}
+
+.imagee{
+  width: 300px;
+  background-color: #465b52;
+  height: 360px;
+  margin-left: 250px;
+  
+}
+.textt {
+  margin-left: 30px;
+  width: 500px;
+}
+.soustitre{
+  font-size: 18px;
+}
+.descr{
+  font-size: 17px;
+}
+.tarifs .ligne1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-top: 60px;
+}
+
+
+.pack_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  border: 2px solid royalblue;
+  padding: 1.5rem 1rem 1rem 1rem;
+  margin-top: 1rem;
+  background-color: #fff;
+  max-width: 300px;
+}
+
+.banner {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.banner_tag {
+  display: flex;
+  height: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: royalblue;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+.pack_name {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: rgb(31 41 55 );
+}
+
+.description {
+  margin: 0 auto 2rem auto;
+  text-align: center;
+  color: rgb(107 114 128 );
+}
+
+.lists > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.5rem;
+}
+
+.list {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.list svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
+  color: royalblue;
+}
+
+.list span {
+  color: rgb( 75 85 99 );
+}
+
+.bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.price_container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.devise {
+  align-self: flex-start;
+  color: rgb( 75 85 99 );
+}
+
+.price {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: rgb(31 41 55 );
+}
+
+.date {
+  color: rgb(107 114 128 );
+}
+
+.btn {
+  display: block;
+  border-radius: 0.5rem;
+  background-color: royalblue;
+  padding: 0.75rem 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: all .1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+  background-color: royalblue;
+}
+
+.btn:active {
+  background-color:royalblue;
+}
+.centt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 200px;
+}
+.text2{
+  margin-left: 30px;
+  width: 600px;
+}
+.maps{
+  border:solid 1px #465b52;
+}
+
+
